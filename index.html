@@ -3,122 +3,173 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Abi ❤️</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;text-align:center;font-family:Georgia,serif;color:#803653;background:linear-gradient(135deg,#ffd5e5,#fff1f6,#ffc0d8)}
-main{max-width:700px;margin:auto;padding:24px 15px}
-h1{font-size:45px;color:#d63375}
-.card{background:#ffffffdd;padding:23px;border-radius:22px;margin:22px 0;box-shadow:0 5px 20px #bd527522}
-p{line-height:1.8}
-button{border:0;border-radius:30px;padding:13px 20px;margin:8px;background:#df4785;color:white;font-size:16px}
-.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.unit{background:#ffe0ed;padding:13px 2px;border-radius:12px}
-.number{display:block;font-size:clamp(20px,5vw,30px);font-weight:bold;color:#c32c69}
-small{font-size:12px}
-.letter{text-align:left}
-.stars{background:#17102c;color:white;padding:22px;border-radius:15px}
-#heart{font-size:35px;line-height:1.7;cursor:pointer;animation:glow 1s infinite alternate}
-#secret{display:none;color:#ffd6e9}
-.float{position:fixed;bottom:-30px;animation:up 7s linear forwards;pointer-events:none}
-@keyframes glow{to{text-shadow:0 0 25px pink}}
-@keyframes up{to{transform:translateY(-110vh);opacity:0}}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(145deg,#210b25,#70264f,#d66b9d);
+  overflow-x: hidden;
+}
+main { padding: 35px 20px; max-width: 650px; margin: auto; }
+h1 { color: #ffd6e8; font-size: 42px; }
+.intro { font-size: 18px; line-height: 1.7; }
+button {
+  background: #ffb5d4;
+  color: #541b3d;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+#subtitulo {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #ffe2ef;
+  text-shadow: 0 0 15px #ff8fc2;
+  transition: opacity .5s;
+}
+.caja {
+  background: #ffffff12;
+  border: 1px solid #ffffff35;
+  padding: 22px;
+  border-radius: 24px;
+  margin: 25px 0;
+}
+#final { display: none; font-size: 21px; line-height: 1.8; }
+.heart { color: #ffb5d4; font-size: 25px; }
+footer { padding: 25px; color: #ffd6e8; }
 </style>
 </head>
 <body>
 <main>
-<div style="font-size:30px">💗🌷💗</div>
-<h1>Para Abi ❤️</h1>
-<p>Mi persona favorita, hoy y siempre.</p>
+  <div class="heart">♥ ♥ ♥</div>
+  <h1>Para mi Abi ❤️</h1>
+  <p class="intro">
+    Preparé esto para vos, porque hay cosas que siento
+    que a veces no me alcanzan las palabras para explicar.
+    Quiero que escuches esta canción y recuerdes
+    lo importante que sos para mí.
+  </p>
 
-<section class="card">
-<h2>💞 Nuestra historia</h2>
-<p>Desde el 2 de septiembre de 2026, cada momento de nuestra historia merece ser recordado.</p>
-<h2>⏳ Nuestro contador</h2>
-<div class="counter">
-<div class="unit"><span class="number" id="d">0</span><small>Días</small></div>
-<div class="unit"><span class="number" id="h">00</span><small>Horas</small></div>
-<div class="unit"><span class="number" id="m">00</span><small>Minutos</small></div>
-<div class="unit"><span class="number" id="s">00</span><small>Segundos</small></div>
-</div>
-<p>Y que el tiempo siga sumando recuerdos con vos. ❤️</p>
-</section>
+  <div class="caja">
+    <p>🎵 Una canción para vos</p>
+    <audio id="musica" controls preload="metadata" style="width:100%">
+      <source src="lifetime.mp3" type="audio/mpeg">
+      Tu navegador no puede reproducir este audio.
+    </audio>
+    <p style="font-size:13px">Tocá reproducir para comenzar ❤️</p>
+  </div>
 
-<section class="card letter">
-<h2>💌 Una carta para vos</h2>
-<p>Mi amor, Abi: ❤️</p>
-<p>Quería hacerte algo especial, algo que fuera solamente tuyo y que pudieras abrir cada vez que quisieras recordar cuánto significás para mí. Tal vez una página no alcance para expresar todo lo que siento, pero cada palabra está escrita pensando en vos.</p>
-<p>Desde que comenzamos nuestra historia, me ilusiona pensar en todos los momentos que todavía nos quedan por vivir. Las risas, las charlas, los abrazos, las pequeñas cosas y esos instantes que parecen comunes, pero que se vuelven hermosos cuando los compartimos con alguien especial.</p>
-<p>Quiero acompañarte, escucharte cuando necesites hablar, celebrar tus alegrías y estar a tu lado cuando las cosas no salgan como esperabas. No espero que todo sea perfecto; quiero que podamos aprender, entendernos y construir algo lindo, paso a paso, juntos.</p>
-<p>Si pudiera pedir un deseo, sería tener muchísimas oportunidades más para demostrarte lo importante que sos para mí. Quiero seguir creando recuerdos con vos, tener nuevas historias para contar y mirar atrás algún día, sonriendo por todo lo que vivimos.</p>
-<p>Quizás no siempre encuentre las palabras exactas para explicar lo que siento, pero nunca quiero que dudes de algo: me importás muchísimo. Me hace feliz poder dedicarte este pequeño detalle y recordarte que sos una parte muy especial de mi vida.</p>
-<p>Esta página es una sorpresa, pero lo que siento por vos es mucho más grande que cualquier pantalla. Ojalá cuando la veas puedas sentir un poquito de todo el cariño que quise poner en ella.</p>
-<p>Gracias por ser parte de mi historia, Abi. Quiero que nos queden muchos días por compartir, muchas sonrisas por descubrir y muchísimos recuerdos hermosos por crear.</p>
-<p><b>Te amo, Abi. ❤️</b> Y deseo que esta sea una de tantas sorpresas lindas que todavía nos esperan.</p>
-<p style="text-align:right">Con todo mi amor,<br>alguien que te elige cada día. 💗</p>
-</section>
+  <div class="caja">
+    <div class="heart">♡</div>
+    <div id="subtitulo">Abi, esta sorpresa es solamente para vos. ❤️</div>
+    <button id="iniciar">Comenzar sorpresa 💗</button>
+  </div>
 
-<section class="card">
-<h2>🎁 Una sorpresa para vos</h2>
-<p>Hay algo escondido entre las estrellas. Tocá el corazón para descubrirlo.</p>
-<div class="stars">
-<div id="heart" onclick="reveal()">✨💗✨<br>💗💗💗</div>
-<div id="secret">
-<h2 style="color:#ffc5df">Mi deseo para nosotros ❤️</h2>
-<p>Que nunca nos falten motivos para sonreír, ganas de cuidarnos y momentos para recordarnos cuánto nos amamos.</p>
-<p>Te amo, Abi. Sos parte de mis sueños más lindos. 🌙💗</p>
-</div>
-</div>
-</section>
-
-<section class="card">
-<h2>🎵 Nuestra canción</h2>
-<p>Lifetime — Chris Grey ❤️</p>
-<p>Agregá el archivo de audio a GitHub con el nombre <b>lifetime.mp3</b> para reproducirlo aquí.</p>
-<audio id="music" controls loop style="width:100%">
-<source src="lifetime.mp3" type="audio/mpeg">
-Tu navegador no admite audio.
-</audio>
-</section>
-
-<p style="font-size:23px">Te amo, Abi. ❤️🌹</p>
-<p>Hoy, mañana y en todos los recuerdos que nos quedan por crear.</p>
+  <div id="final" class="caja">
+    <div class="heart">♥ ♥ ♥</div>
+    <h2>Mi persona favorita</h2>
+    Abi, si pudiera pedirle algo a la vida, sería
+    que me permita seguir compartiendo mis días con vos.
+    Quiero acompañarte en tus días lindos y también
+    cuando las cosas se pongan difíciles.
+    No sé todo lo que nos espera en el futuro,
+    pero sé que quiero descubrirlo de tu mano.
+    Gracias por ser parte de mi vida.
+    <p><strong>Te amo, hoy, mañana y en cada versión de nuestro futuro. ❤️</strong></p>
+  </div>
+  <footer>Hecho con todo mi amor, para Abi ❤️</footer>
 </main>
 
 <script>
-const start = new Date(2026, 8, 2, 0, 0, 0).getTime();
+const frases = [
+[0, "Abi, esta sorpresa es solamente para vos. ❤️"],
+[12, "Desde que llegaste a mi vida, muchas cosas cambiaron."],
+[25, "Hay algo en vos que hace especiales hasta los días más comunes."],
+[38, "Tu sonrisa tiene una forma única de alegrarme el corazón."],
+[51, "Quiero estar a tu lado cuando todo salga bien."],
+[64, "Y también cuando necesites un abrazo y un poquito de paz."],
+[77, "No necesito que todo sea perfecto para ser feliz con vos."],
+[90, "Quiero que podamos crecer, aprender y soñar juntos."],
+[103, "Si alguna vez dudás de lo importante que sos para mí, recordá esto."],
+[116, "Sos alguien a quien quiero cuidar, respetar y acompañar."],
+[129, "Quiero compartir con vos las pequeñas cosas de cada día."],
+[142, "Las charlas largas, las risas y los abrazos que dicen todo."],
+[155, "No puedo prometerte que nunca habrá días difíciles."],
+[168, "Pero sí puedo elegir tratarte con amor y sinceridad."],
+[181, "Quiero celebrar tus alegrías y escucharte cuando lo necesites."],
+[194, "Porque para mí amar también significa estar presente."],
+[207, "Si pudiera volver al principio, me daría la oportunidad de conocerte otra vez."],
+[220, "Y volvería a descubrir todo eso que te hace ser vos."],
+[233, "Quiero seguir creando recuerdos que algún día nos hagan sonreír."],
+[246, "Quiero que tengamos historias que sean solamente nuestras."],
+[259, "Y que nunca nos falten motivos para abrazarnos fuerte."],
+[272, "Abi, gracias por compartir una parte de tu vida conmigo."],
+[285, "No sos una persona más en mi historia."],
+[298, "Sos alguien que ocupa un lugar muy especial en mi corazón."],
+[311, "Y hay sentimientos que crecen cada vez que pienso en vos."],
+[324, "Ojalá pueda demostrarte con hechos todo lo que significás para mí."],
+[337, "Quiero seguir eligiéndote con cariño, paciencia y respeto."],
+[350, "Y seguir descubriendo nuestro futuro, un día a la vez."],
+[363, "Si llegaste hasta acá, quiero que sepas algo... ❤️"],
+[376, "TE AMO, ABI. Y ME HACE FELIZ TENERTE EN MI VIDA. 💗"]
+];
 
-function updateCounter(){
-  let diff = Math.max(0, Date.now() - start);
-  const days = Math.floor(diff / 86400000);
-  const hours = Math.floor(diff / 3600000) % 24;
-  const minutes = Math.floor(diff / 60000) % 60;
-  const seconds = Math.floor(diff / 1000) % 60;
+const musica = document.getElementById("musica");
+const subtitulo = document.getElementById("subtitulo");
+const final = document.getElementById("final");
+let iniciado = false;
+let ultima = -1;
 
-  document.getElementById("d").textContent = days;
-  document.getElementById("h").textContent = String(hours).padStart(2,"0");
-  document.getElementById("m").textContent = String(minutes).padStart(2,"0");
-  document.getElementById("s").textContent = String(seconds).padStart(2,"0");
-}
+document.getElementById("iniciar").addEventListener("click", async () => {
+  iniciado = true;
+  final.style.display = "none";
+  if (musica.paused) {
+    try {
+      await musica.play();
+    } catch (e) {
+      subtitulo.textContent = "Tocá reproducir en el reproductor para escuchar la canción. ❤️";
+    }
+  }
+});
 
-function reveal(){
-  document.getElementById("secret").style.display = "block";
-  document.getElementById("heart").textContent = "💖✨💖";
-}
+musica.addEventListener("timeupdate", () => {
+  if (!iniciado) return;
+  let actual = -1;
+  for (let i = 0; i < frases.length; i++) {
+    if (musica.currentTime >= frases[i][0]) actual = i;
+  }
+  if (actual !== ultima && actual >= 0) {
+    subtitulo.style.opacity = 0;
+    setTimeout(() => {
+      subtitulo.textContent = frases[actual][1];
+      subtitulo.style.opacity = 1;
+    }, 250);
+    ultima = actual;
+  }
+});
 
-setInterval(updateCounter, 1000);
-updateCounter();
+musica.addEventListener("ended", () => {
+  final.style.display = "block";
+  subtitulo.textContent = "Y si algo quiero que te quede claro, es que te amo, Abi. ❤️";
+  final.scrollIntoView({ behavior: "smooth", block: "center" });
+});
 
-setInterval(()=>{
-  const heart = document.createElement("div");
-  heart.className = "float";
-  heart.textContent = ["💗","💕","💖","✨"][Math.floor(Math.random()*4)];
-  heart.style.left = Math.random()*95 + "vw";
-  heart.style.fontSize = (18+Math.random()*18) + "px";
-  document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),7000);
-},700);
+musica.addEventListener("seeked", () => {
+  ultima = -1;
+});
 </script>
 </body>
 </html>
