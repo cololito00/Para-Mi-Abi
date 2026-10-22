@@ -35,12 +35,9 @@ button{
 }
 button:active{transform:scale(.97)}
 .small{font-size:13px;color:#d9b8e8}
-.envelope{
-  font-size:72px;animation:float 2s infinite;cursor:pointer
-}
 @keyframes float{50%{transform:translateY(-8px)}}
-.hidden{display:none!important}
-.letter{ text-align:left;color:#fff0fb;animation:appear 1s}
+.letter{text-align:left;color:#fff0fb;animation:appear 1s}
+.letter p{white-space:pre-wrap;overflow-wrap:anywhere}
 @keyframes appear{
   from{opacity:0;transform:translateY(12px)}
   to{opacity:1;transform:translateY(0)}
@@ -81,6 +78,7 @@ button:active{transform:scale(.97)}
 #gift:hover{transform:scale(1.1)}
 #giftMessage{font-size:19px;color:#ffd4f2}
 #final{animation:appear 1.5s}
+.hidden{display:none!important}
 .star{
   position:fixed;pointer-events:none;color:white;
   animation:twinkle 3s infinite
@@ -107,19 +105,8 @@ footer{font-size:12px;color:#d9b8e8;margin-top:30px}
 
   <section class="card">
     <h2>💌 Una carta para vos</h2>
-    <p>Hay algo que quiero que leas...</p>
-    <div class="envelope" onclick="openLetter()">💌</div>
-    <button onclick="openLetter()">Abrí tu carta ❤️</button>
-
-    <div class="letter hidden" id="letter">
-      <p>Mi Abi hermosa: ❤️</p>
-      <p>Quería regalarte algo diferente, algo que puedas guardar como un pequeño recuerdo de lo que siento por vos.</p>
-      <p>A veces cuesta encontrar las palabras justas para explicar lo que alguien significa en nuestra vida. Pero quiero que sepas que sos muy especial para mí.</p>
-      <p>Me gusta imaginar todos los momentos lindos que todavía nos quedan por compartir: las risas, las charlas, los abrazos y esas pequeñas cosas que terminan significando tanto.</p>
-      <p>No hace falta que todo sea perfecto. Para mí, lo importante es que lo que compartamos sea sincero, que podamos acompañarnos y disfrutar cada momento.</p>
-      <p>Ojalá esta página te saque una sonrisa y te recuerde que alguien se tomó el tiempo de crearla pensando en vos.</p>
-      <p style="text-align:center;font-size:23px;color:#ffc5ed">Te amo, Abi. ❤️</p>
-      <p style="text-align:right">Con todo mi amor 💜</p>
+    <div class="letter" id="letter">
+      <div id="letterText"></div>
     </div>
   </section>
 
@@ -201,13 +188,58 @@ footer{font-size:12px;color:#d9b8e8;margin-top:30px}
 </main>
 
 <script>
-// Fecha especial: 2 de septiembre de 2026 a las 00:00, hora argentina.
-const fechaEspecial = new Date("2026-09-02T00:00:00-03:00").getTime();
+// Carta automática: aparece letra por letra.
+const letterContent = [
+  "Mi Abi hermosa: ❤️",
+  "Quería regalarte algo diferente, algo que puedas guardar como un pequeño recuerdo de lo que siento por vos.",
+  "A veces cuesta encontrar las palabras justas para explicar lo que alguien significa en nuestra vida. Pero quiero que sepas que sos muy especial para mí.",
+  "Me gusta imaginar todos los momentos lindos que todavía nos quedan por compartir: las risas, las charlas, los abrazos y esas pequeñas cosas que terminan significando tanto.",
+  "No hace falta que todo sea perfecto. Para mí, lo importante es que lo que compartamos sea sincero, que podamos acompañarnos y disfrutar cada momento.",
+  "Ojalá esta página te saque una sonrisa y te recuerde que alguien se tomó el tiempo de crearla pensando en vos.",
+  "Te amo, Abi. ❤️",
+  "Con todo mi amor 💜"
+];
 
-function openLetter(){
-  document.getElementById("letter").classList.remove("hidden");
+const letterText = document.getElementById("letterText");
+let paragraphIndex = 0;
+let letterIndex = 0;
+
+function typeLetter(){
+  if(paragraphIndex >= letterContent.length) return;
+
+  const paragraph = letterContent[paragraphIndex];
+
+  if(letterIndex === 0){
+    const p = document.createElement("p");
+    letterText.appendChild(p);
+
+    if(paragraphIndex === 6){
+      p.style.textAlign = "center";
+      p.style.fontSize = "23px";
+      p.style.color = "#ffc5ed";
+    }
+
+    if(paragraphIndex === 7){
+      p.style.textAlign = "right";
+    }
+  }
+
+  const current = letterText.lastElementChild;
+  current.textContent += paragraph.charAt(letterIndex);
+  letterIndex++;
+
+  if(letterIndex >= paragraph.length){
+    paragraphIndex++;
+    letterIndex = 0;
+    setTimeout(typeLetter,650);
+  }else{
+    setTimeout(typeLetter,45);
+  }
 }
 
+typeLetter();
+
+// Corazón con mensajes
 const messages=[
   "Sos una persona muy especial para mí. ❤️",
   "Ojalá hoy tengas mil motivos para sonreír. 💗",
@@ -230,6 +262,9 @@ function showFinal(){
   document.getElementById("final").classList.remove("hidden");
   for(let i=0;i<25;i++) createParticle();
 }
+
+// Contador desde el 2 de septiembre de 2026 a las 00:00, hora argentina.
+const fechaEspecial = new Date("2026-09-02T00:00:00-03:00").getTime();
 
 function updateTimer(){
   const now=Date.now();
@@ -279,8 +314,7 @@ function loadPhotos(event){
   });
 }
 
-// Frases originales sincronizadas con el tiempo de la canción.
-// Ajustá los tiempos para que coincidan con tu archivo de audio.
+// Frases originales que aparecen según el tiempo de la canción.
 const phrases=[
   {t:0,text:"✨ Esta canción ahora acompaña una sorpresa para vos."},
   {t:12,text:"❤️ Hay personas que hacen más lindos nuestros días."},
