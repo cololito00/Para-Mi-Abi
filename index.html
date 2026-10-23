@@ -568,20 +568,63 @@ music.addEventListener("error",()=>{
 // SUBTÍTULOS SINCRONIZADOS
 // Agregá tus frases en español con el segundo exacto en que deben aparecer.
 // Ejemplo: {t:5,text:"Tu frase en español"}
-const phrases=[
-  {t:0,text:"💗 UNA VIDA ENTERA 💗"},
-  {t:5,text:"Tu primera frase en español"},
-  {t:10,text:"Tu segunda frase en español"},
-  {t:16,text:"Tu tercera frase en español"},
-  {t:23,text:"Una frase especial para Abi ❤️"},
-  {t:33,text:"Cada segundo cuenta cuando se trata de amor 💗"},
-  {t:45,text:"Una vida entera de momentos por compartir"},
-  {t:60,text:"Mi mano en tu mano ❤️"},
-  {t:78,text:"Podría amarte por una vida entera 💗"},
-  {t:100,text:"Siempre hay algo lindo por lo que sonreír"},
-  {t:123,text:"Un pequeño regalo hecho para vos, Abi"},
-  {t:150,text:"Gracias por compartir este momento conmigo 💜"}
+
+const phrases = [
+  {t:19, text:"Imprudente"},
+  {t:21, text:"no sabes lo que me has hecho"},
+  {t:25, text:"Cada segundo"},
+  {t:29, text:"que estamos separados"},
+  {t:30, text:"estoy en la miseria"},
+  {t:32, text:"cariño, corro cuando me llamas"},
+  {t:36, text:"lo daria todo"},
+  {t:38, text:"si tu quisieras"},
+
+  {t:40, text:"no romperé una promesa"},
+  {t:42, text:"salto si te caes"},
+  {t:43.3, text:"no pude detenerme"},
+  {t:47, text:"oh, cariño, podría amarte"},
+  {t:49, text:"hasta el día en que muera"},
+  {t:51, text:"hasta que los océanos"},
+  {t:53, text:"empiezen a secarse"},
+  {t:56, text:"usaría mi último aliento"},
+
+  {t:57, text:"sólo para llamarte mío"},
+  {t:59, text:"podría amarte toda la vida"},
+  {t:62, text:"mi mano en tu mano"},
+  {t:65, text:"hasta el día en que mueramos"},
+  {t:68, text:"hasta que las estrellas"},
+  {t:69, text:"caigan del cielo"},
+  {t:71, text:"abrazandote fuerte"},
+  {t:72, text:"hasta que mi corazón se detenga"},
+
+  {t:75, text:"podría amarte toda la vida"},
+  {t:81, text:"sé que nadie más es suficiente para mi"},
+  {t:88, text:"cariño, sé que estaremos ardiendo"},
+  {t:94, text:"eternamente"},
+  {t:96, text:"porque todo se está desmoronando"},
+  {t:99, text:"y el tiempo se está acabando"},
+  {t:101, text:"escalaremos todas las montañas"},
+  {t:103, text:"pasaría mil"},
+  {t:105, text:"noches en el frío"},
+  {t:107, text:"pero estaremos aquí soportandolo"},
+  {t:110, text:"oh, cariño, podría amarte"},
+  {t:113, text:"hasta el día en que me muera"},
+  {t:115, text:"hasta que los océanos"},
+  {t:117, text:"empiecen a secarse"},
+  {t:119, text:"usaré mi último aliento"},
+  {t:121, text:"sólo para llamarte mío"},
+  {t:123, text:"podría amarte toda la vida"},
+  {t:127, text:"mi mano en tu mano"}, 
+  {t:129, text:"hasta el día que mueramos"},
+  {t:131, text:"hasta que las estrellas"},
+  {t:132, text:"caigan del cielo"},
+  {t:135, text:"abrazándote fuerte"},
+  {t:136, text:"hasta que mi corazón se detenga"},
+  {t:139, text:"podría amarte toda una vida"},
+  {t:146, text:"toda una vida, si"},
+  {t:154, text:"toda una vida"}
 ];
+
 
 function updateSubtitle(){
   const time=music.currentTime;
@@ -636,4 +679,4 @@ function createParticle(){
 setInterval(createParticle,550);
 </script>
 </body>
-  </html>
+      </html>
