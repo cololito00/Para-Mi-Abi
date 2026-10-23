@@ -9,16 +9,25 @@
 <style>
 *{box-sizing:border-box}
 
+
 body{
   margin:0;
-  background:#10051c;
+  background-color:#10051c;
+  background-image:
+    linear-gradient(
+      rgba(16,5,28,.48),
+      rgba(18,5,28,.72)
+    ),
+    url("fondo.jpg");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   color:white;
   font-family:Georgia,serif;
   text-align:center;
   min-height:100vh;
-  overflow-x:hidden;
-  position:relative;
-  isolation:isolate;
+  overflow-x:hidden
 }
 
 body::before{
