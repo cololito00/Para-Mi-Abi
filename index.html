@@ -8,12 +8,34 @@
 
 <style>
 *{box-sizing:border-box}
+
 body{
   margin:0;
-  background:linear-gradient(160deg,#10051c,#351047,#12051c);
-  color:white;font-family:Georgia,serif;text-align:center;
-  min-height:100vh;overflow-x:hidden
+  background:#10051c;
+  color:white;
+  font-family:Georgia,serif;
+  text-align:center;
+  min-height:100vh;
+  overflow-x:hidden;
+  position:relative;
+  isolation:isolate;
 }
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,5,28,.30),
+      rgba(22,5,31,.68)
+    ),
+    url("fondo-abi.png") center center / cover no-repeat;
+  pointer-events:none;
+}
+
 main{
   width:min(92%,520px);margin:auto;padding:28px 0 45px;
   position:relative;z-index:2
